@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var personData = ViewData["personData"] as string; 
+    var profdescr = ViewData["profdescr"] as string; 
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+   <h1>Tets questions</h1>
+    <form type="hidden" method="post" action="Finish">
+        <input  name="previsioninfo" value="@personData @profdescr";
+        <fieldset>
+            <legend>Select a correct answer 2+2:</legend>
+
+            <div>
+                <input type="radio" id="1" name="answer" value="1" checked />
+                <label for="1">1</label>
+            </div>
+
+            <div>
+                <input type="radio" id="2" name="answer" value="2" />
+                <label for="2">2</label>
+            </div>
+
+            <div>
+                <input type="radio" id="3" name="answer" value="3" />
+                <label for="3">3</label>
+            </div>
+        </fieldset>
+        <button>Next</button>
+    </form>
+</body>
+
+</html>

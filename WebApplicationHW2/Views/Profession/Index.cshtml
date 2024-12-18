@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var profession = ViewData["profession"] as Profession;
+    var previsioninfo = ViewData["previsioninfo"] as String;
+}
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>@previsioninfo</h1>
+    <h1>@profession.Name</h1>
+    <p>Discribe your prefession</p>
+    <form method="post" action="Test">
+        <input type="hidden" name="previsioninfo" value="@previsioninfo @profession.Name" />
+        <lable>Profession description</lable><br />
+        <input name="profdescr" /><br />
+        <button>Send</button>
+    </form>
+</body>
+
+    </html>
